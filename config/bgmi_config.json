@@ -1,0 +1,58 @@
+{
+  "bgmi_version": "4.2",
+  "architecture": "arm64-v8a",
+  "target_libraries": [
+    "libUE4.so",
+    "libtersafe2.so",
+    "libanogs.so"
+  ],
+  "gameloop_settings": {
+    "emulator_path": "C:\\Program Files\\TxGameAssistant\\AppMarket\\gameloop.exe",
+    "package_name": "com.pubg.imobile",
+    "activity": "com.epicgames.ue4.SplashActivity"
+  },
+  "bypass_methods": {
+    "property_spoofing": {
+      "enabled": true,
+      "properties": {
+        "ro.build.fingerprint": "samsung/SM-G973F/SM-G973F:11/RP1A.200720.012/G973FXXU9FUH3:user/release-keys",
+        "ro.product.manufacturer": "samsung",
+        "ro.product.model": "SM-G973F",
+        "ro.build.tags": "release-keys",
+        "ro.kernel.qemu": "0"
+      }
+    },
+    "library_hooks": {
+      "enabled": true,
+      "libUE4_offsets": {
+        "emulator_check_1": "0x123456",
+        "emulator_check_2": "0x234567",
+        "root_check": "0x345678"
+      }
+    },
+    "memory_patches": {
+      "enabled": true,
+      "patches": [
+        {
+          "name": "Disable Emulator Detection",
+          "library": "libUE4.so",
+          "offset": "0x123456",
+          "original_bytes": "00 00 00 00",
+          "patched_bytes": "01 00 A0 E3"
+        }
+      ]
+    }
+  },
+  "advanced_options": {
+    "frida_server_port": 27042,
+    "enable_logging": true,
+    "log_level": "INFO",
+    "auto_bypass": true,
+    "stealth_mode": true
+  },
+  "warnings": {
+    "educational_use_only": true,
+    "tos_violation_warning": "Using this tool may violate BGMI Terms of Service",
+    "ban_risk": "HIGH - Use at your own risk"
+  }
+}

@@ -1,0 +1,30 @@
+# Python dependencies for BGMI Emulator Bypass Tool
+
+# Core dependencies
+frida==16.1.4
+frida-tools==12.2.1
+
+# For Android debugging and ADB
+pure-python-adb==0.3.0.dev0
+
+# For memory manipulation
+pyelftools==0.30
+
+# For configuration
+pyyaml==6.0.1
+
+# For command-line interface
+click==8.1.7
+colorama==0.4.6
+
+# For logging
+loguru==0.7.2
+
+# For binary analysis support
+capstone==5.0.1
+
+# For process injection
+psutil==5.9.6
+
+# For JSON handling
+jsonschema==4.20.0

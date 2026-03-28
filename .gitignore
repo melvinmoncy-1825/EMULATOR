@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+/tmp/
+*.tmp
+*.bak
+
+# Frida
+frida-server*
+
+# Analysis files
+*.idb
+*.i64
+*.id0
+*.id1
+*.nam
+*.til
+
+# BGMI specific
+libUE4.so
+libtersafe2.so
+libanogs.so
+*.apk
+*.obb
+
+# Config backups
+*.json.bak
+
+# Test files
+test_output/
